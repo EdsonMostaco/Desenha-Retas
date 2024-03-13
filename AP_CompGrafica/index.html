@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traça Reta</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container_controles">
+        <h2>Coordenadas da Reta</h2>
+        <div class="container_coordenadas">
+            <div class="container_coordenada">
+                <input type="number" name="x1" id="x1" class="coordenada" placeholder="Insira coordenada X1">
+                <input type="number" name="y1" id="y1" class="coordenada" placeholder="Insira coordenada Y1">
+            </div>
+            <div class="container_coordenada">
+                <input type="number" name="x2" id="x2" class="coordenada" placeholder="Insira coordenada X2">
+                <input type="number" name="y2" id="y2" class="coordenada" placeholder="Insira coordenada Y2">
+            </div>
+            <button>Calcular</button>
+            <p>O plano ao lado tem dimensão de 600px por 400px. <br>Ao inserir valores, leve em consideração o valor máximo da plano.</p>
+        </div>
+    </div>
+    <div class="plano_cartesiano">
+        <div class="reta" id="primeiro"></div>
+        <div class="reta" id="segundo"></div>
+        <div class="reta" id="terceiro"></div>
+    </div>
+    <script src="reta.js"></script>
+</body>
+</html>
