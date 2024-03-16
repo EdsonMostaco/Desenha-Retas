@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
 
-            if(!x2 || y2 < 0){
+            if(!(x2 || y2) > 0){
                 if(x1 > x2){
                     var temp = x2;
                     x2 = x1;
@@ -49,9 +49,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     x1 = temp;
                 }
             }
+            if((x1 > x2) && (y1 < y2)) {
+                var temp = x2;
+                x2 = x1;
+                x1 = temp;
+                temp = y2;
+                y2 = y1;
+                y1 = temp;
+            }
 
-            
-            //Faz o espelhamento quando o eixo x ou y é negativo
             
 
 
@@ -61,9 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             for (let x = x1; x <= x2; x++) {
                 let y = y1 + a * (x - x1);
-                if (x > plano.clientWidth || y > plano.clientHeight) {
-                    break;
-                };
                 let novaDiv = document.createElement('div');
                 novaDiv.className = 'reta';
                 novaDiv.style.top = y + 'px';
